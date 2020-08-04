@@ -1,0 +1,35 @@
+< THE SYMBOL TABLE >  ¿ØÖÆ³ÌÐò.exe  --  emu8086 assembler version: 4.08 
+===================================================================================================
+Name                     	Offset    	Size      	Type      	Segment   
+===================================================================================================
+DATA                     	00000     	-5        	SEGMENT   	(ITSELF)  
+TABLE                    	00000     	1         	VAR       	DATA      
+HOUR                     	0000A     	1         	VAR       	DATA      
+MINUTE                   	0000B     	1         	VAR       	DATA      
+SECOND                   	0000C     	1         	VAR       	DATA      
+DAY                      	0000D     	1         	VAR       	DATA      
+HR                       	0000E     	1         	VAR       	DATA      
+ME                       	00011     	1         	VAR       	DATA      
+SD                       	00014     	1         	VAR       	DATA      
+STACK                    	00002     	-5        	SEGMENT   	(ITSELF)  
+CODE                     	00082     	-5        	SEGMENT   	(ITSELF)  
+START                    	00000     	-1        	LABEL     	CODE      
+AGAIN1                   	00087     	-1        	LABEL     	CODE      
+INT_0                    	0008D     	-1        	NEAR      	CODE      
+AA_LOC1TMP               	000B3     	-1        	LABEL     	CODE      
+AA_LOC2TMP               	000D9     	-1        	LABEL     	CODE      
+AA_LOC3TMP               	000FF     	-1        	LABEL     	CODE      
+INT_1                    	00119     	-1        	NEAR      	CODE      
+AA_LOC4TMP               	00134     	-1        	LABEL     	CODE      
+AA_LOC5TMP               	0015A     	-1        	LABEL     	CODE      
+AA_LOC6TMP               	00180     	-1        	LABEL     	CODE      
+INT_2                    	0019A     	-1        	NEAR      	CODE      
+INT_3                    	001A9     	-1        	NEAR      	CODE      
+INT_4                    	001B8     	-1        	NEAR      	CODE      
+DISPLAY                  	001C7     	-1        	NEAR      	CODE      
+DELAY                    	0022A     	-1        	NEAR      	CODE      
+AGAIN3                   	0022E     	-1        	LABEL     	CODE      
+===================================================================================================
+[ 2020/5/17  --  12:26:41 ] 
+< END >
+ 

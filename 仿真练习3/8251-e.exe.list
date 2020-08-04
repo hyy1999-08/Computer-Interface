@@ -1,0 +1,92 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+8251-e.exe -- emu8086 assembler version: 4.08  
+ 
+[ 2020/5/13  --  10:29:07 ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       DATA SEGMENT
+[   2]    0000: 48 65 6C 6C 6F 2C 57 6F 72 6C 64 21   	MESS DB 'Hello,World!$'   ;×Ö·û´®Êý¾Ý
+                24                                  
+[   3]        :                                       DATA ENDS
+[   4]        :                                       CODE SEGMENT
+[   5]        :                                       ASSUME CS:CODE,DS:DATA
+[   6]    0010: B8 00 00                              START:	MOV AX,DATA
+[   7]    0013: 8E D8                                 	MOV DS,AX
+[   8]    0015: B0 00                                 	MOV AL,0
+[   9]    0017: B9 03 00                              	MOV CX,3
+[  10]    001A: E6 32                                 OUTPUT0: OUT 32H,AL
+[  11]    001C: 90                                    	NOP
+[  12]    001D: E2 FB                                 	LOOP OUTPUT0        ;Ð´Èë¿ÕÖ¸Áî
+[  13]    001F: B0 40                                 	MOV AL,01000000B    ;Ð´Èë¸´Î»ÃüÁî
+[  14]    0021: E6 32                                 	OUT 32H,AL
+[  15]    0023: 90                                    	NOP
+[  16]    0024: B0 4E                                 	MOV AL,01001110B    ;·½Ê½×Ö
+[  17]    0026: E6 32                                 	OUT 32H,AL
+[  18]    0028: 90                                    	NOP
+[  19]    0029: B0 15                                 	MOV AL,00010101B     ;ÃüÁî×Ö
+[  20]    002B: E6 32                                 	OUT 32H,AL
+[  21]    002D: 90                                    	NOP
+[  22]    002E: BB 00 00                              	MOV BX,OFFSET MESS
+[  23]    0031: E4 32                                 AGAIN:	IN AL,32H
+[  24]    0033: A8 01                                 	TEST AL,01H
+[  25]    0035: 74 FA                                 	JZ AGAIN
+[  26]    0037: 8A 07                                 	MOV AL,[BX]
+[  27]    0039: E6 30                                 	OUT 30H,AL
+[  28]    003B: 43                                    	INC BX
+[  29]    003C: 80 3F 24                              	CMP BYTE PTR[BX],'$'
+[  30]    003F: 75 F0                                 	JNZ AGAIN
+[  31]    0041: EB FE                                 	JMP $
+[  32]        :                                       CODE ENDS
+[  33]        :                                       END START
+[  34]        :                                       
+[  35]        :                                       
+[  36]        :                                       
+ 
+===================================================================================================
+ 
+EXE HEADER - bytes from 0000 to 01FF inclusive.
+
+0000: 4D      -   exe signature (M)
+0001: 5A      -   exe signature (Z)
+0002: 43      -   bytes on last page (l.byte)
+0003: 00      -   bytes on last page (h.byte)
+0004: 02      -   512 byte pages in file (l.byte)
+0005: 00      -   512 byte pages in file (h.byte)
+0006: 01      -   relocations (l.byte)
+0007: 00      -   relocations (h.byte)
+0008: 20      -   paragraphs in header (l.byte)
+0009: 00      -   paragraphs in header (h.byte)
+000A: 00      -   minimum memory (l.byte)
+000B: 00      -   minimum memory (h.byte)
+000C: FF      -   maximum memory (l.byte)
+000D: FF      -   maximum memory (h.byte)
+000E: 00      -   SS - stack segment (l.byte)
+000F: 00      -   SS - stack segment (h.byte)
+0010: 00      -   SP - stack pointer (l.byte)
+0011: 00      -   SP - stack pointer (h.byte)
+0012: 23      -   check sum (l.byte)
+0013: 75      -   check sum (h.byte)
+0014: 00      -   IP - instruction pointer (l.byte)
+0015: 00      -   IP - instruction pointer (h.byte)
+0016: 01      -   CS - code segment (l.byte)
+0017: 00      -   CS - code segment (h.byte)
+0018: 1E      -   relocation table adress (l.byte)
+0019: 00      -   relocation table adress (h.byte)
+001A: 00      -   overlay number (l.byte)
+001B: 00      -   overlay number (h.byte)
+001C: 01      -   signature (l.byte)
+001D: 00      -   signature (h.byte)
+001E: 01      -   relocation table - offset inside segment (l.byte)
+001F: 00      -   relocation table - offset inside segment (h.byte)
+0020: 01      -   relocation table - segment anchor (l.byte)
+0021: 00      -   relocation table - segment anchor (h.byte)
+0022 to 01FF  -   reserved relocation area  (00) 
+
+
+
+
+===================================================================================================

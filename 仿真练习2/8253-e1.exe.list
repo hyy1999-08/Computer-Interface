@@ -1,0 +1,79 @@
+EMU8086 GENERATED LISTING. MACHINE CODE <- SOURCE.
+ 
+8253-e1.exe -- emu8086 assembler version: 4.08  
+ 
+[ 2020/5/12  --  11:45:10 ] 
+ 
+===================================================================================================
+[LINE]     LOC: MACHINE CODE                          SOURCE
+===================================================================================================
+ 
+[   1]        :                                       CODE SEGMENT
+[   2]        :                                       ASSUME CS:CODE
+[   3]    0000: B0 11                                 START:	MOV AL,00010001B    ;设置8253工作方式
+[   4]    0002: E6 46                                 	OUT 46H,AL               ;片选信号
+[   5]    0004: B0 05                                 	MOV AL,05H               ;输入低8位计数值
+[   6]    0006: E6 40                                 	OUT 40H,AL               ;写入对应寄存器
+[   7]    0008: EB FE                                 	JMP $
+[   8]        :                                       CODE ENDS
+[   9]        :                                       END START
+[  10]        :                                       
+[  11]        :                                       
+[  12]        :                                       
+[  13]        :                                       
+[  14]        :                                       
+[  15]        :                                       
+[  16]        :                                       
+[  17]        :                                       
+[  18]        :                                       
+[  19]        :                                       
+[  20]        :                                       
+[  21]        :                                       
+[  22]        :                                       
+[  23]        :                                       
+[  24]        :                                       
+[  25]        :                                       
+[  26]        :                                       
+[  27]        :                                       
+[  28]        :                                       
+ 
+===================================================================================================
+ 
+EXE HEADER - bytes from 0000 to 01FF inclusive.
+
+0000: 4D      -   exe signature (M)
+0001: 5A      -   exe signature (Z)
+0002: 0A      -   bytes on last page (l.byte)
+0003: 00      -   bytes on last page (h.byte)
+0004: 02      -   512 byte pages in file (l.byte)
+0005: 00      -   512 byte pages in file (h.byte)
+0006: 00      -   relocations (l.byte)
+0007: 00      -   relocations (h.byte)
+0008: 20      -   paragraphs in header (l.byte)
+0009: 00      -   paragraphs in header (h.byte)
+000A: 00      -   minimum memory (l.byte)
+000B: 00      -   minimum memory (h.byte)
+000C: FF      -   maximum memory (l.byte)
+000D: FF      -   maximum memory (h.byte)
+000E: 00      -   SS - stack segment (l.byte)
+000F: 00      -   SS - stack segment (h.byte)
+0010: 00      -   SP - stack pointer (l.byte)
+0011: 00      -   SP - stack pointer (h.byte)
+0012: 51      -   check sum (l.byte)
+0013: 07      -   check sum (h.byte)
+0014: 00      -   IP - instruction pointer (l.byte)
+0015: 00      -   IP - instruction pointer (h.byte)
+0016: 00      -   CS - code segment (l.byte)
+0017: 00      -   CS - code segment (h.byte)
+0018: 1E      -   relocation table adress (l.byte)
+0019: 00      -   relocation table adress (h.byte)
+001A: 00      -   overlay number (l.byte)
+001B: 00      -   overlay number (h.byte)
+001C: 01      -   signature (l.byte)
+001D: 00      -   signature (h.byte)
+001E to 01FF  -   reserved relocation area  (00) 
+
+
+
+
+===================================================================================================
